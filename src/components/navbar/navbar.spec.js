@@ -1,10 +1,16 @@
-import { render } from "@testing-library/react";
+import { render, screen, prettyDOM } from "@testing-library/react";
 import Navbar from "./";
 
 describe("Navbar", () => {
+  beforeEach(() => {
+    render(<Navbar />);
+  });
   it("should display the title of the website", async () => {
-    const renderedNavbarComponent = render(<Navbar />);
-    const siteName = await renderedNavbarComponent.findByText(/^Home Search$/);
+    const siteName = await screen.findByText(/^Home Search$/);
     expect(siteName).toBeInTheDocument();
+  });
+  it("should display 'Sign In'", async () => {
+    const signInText = await screen.findByTestId("sign-in");
+    expect(signInText).toBeInTheDocument();
   });
 });

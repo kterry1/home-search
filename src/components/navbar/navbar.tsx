@@ -12,7 +12,9 @@ const Navbar: FC = () => {
         <Title title="Home Search" />
       </div>
       <div className={styles.right_side_nav_container}>
-        <div className={styles.sign_in_text}>Sign In</div>
+        <div className={styles.sign_in_text} data-testid="sign-in">
+          Sign In
+        </div>
         <MenuIcon styles={styles} />
       </div>
     </nav>
