@@ -7,6 +7,6 @@ describe("Title", () => {
     const renderedTitleProp = await renderedTitleComponent.findByText(
       /^New Page$/
     );
-    expect(renderedTitleProp).toBeInTheDocument("New Page");
+    expect(renderedTitleProp).toBeInTheDocument();
   });
 });
