@@ -5,7 +5,7 @@ interface TitleProps {
   title: string;
 }
 
-const Title: FC<TitleProps> = (props: TitleProps) => {
+const Title: FC<TitleProps> = (props) => {
   return <div className={styles.title}>{props.title}</div>;
 };
 

@@ -1,11 +1,14 @@
 import { FC } from "react";
-import styles from "./App.module.css";
 import Navbar from "./components/navbar";
+import SearchInput from "./components/search-input";
 
 const App: FC = () => {
   return (
-    <div className={styles.App}>
+    <div>
       <Navbar />
+      <div>
+        <SearchInput />
+      </div>
     </div>
   );
 };

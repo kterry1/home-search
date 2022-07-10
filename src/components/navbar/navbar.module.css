@@ -1,10 +1,11 @@
 .nav {
   height: 2rem;
-  background-color: var(--secondary-color);
-  padding: var(--padding-md);
+  background-color: var(--background-color);
+  padding: var(--padding-md) var(--padding-lg);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .right_side_nav_container {
@@ -23,8 +24,8 @@
 }
 
 .left_side_nav_container img {
-  filter: invert(38%) sepia(5%) saturate(733%) hue-rotate(191deg)
-    brightness(87%) contrast(85%);
+  filter: invert(45%) sepia(23%) saturate(2011%) hue-rotate(317deg)
+    brightness(118%) contrast(97%);
 }
 
 .right_side_nav_container .sign_in_text:hover {
