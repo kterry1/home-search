@@ -1,9 +1,11 @@
-import { FC, useState } from "react";
+import { FC, useState, useContext } from "react";
+import { SearchResultsContext } from "../../context/searchResultsContext";
 import styles from "./search-input.module.css";
 
 const getZillowData = (
   e: React.MouseEvent<HTMLInputElement, MouseEvent>,
-  searchRequest: string
+  searchRequest: string,
+  setSearchResults: (response: any) => void
 ): void => {
   e.preventDefault();
   const API_KEY = process.env.REACT_APP_ZILLOW_API_KEY;
@@ -18,30 +20,35 @@ const getZillowData = (
     },
   };
 
-  fetch(
-    `https://zillow-com1.p.rapidapi.com/propertyExtendedSearch?location=${modifySearchStringForFetchRequest}`,
-    options
-  )
-    .then((response) => response.json())
-    .then((response) => {
-      console.log(response);
-      if (response.totalResultCount > 1) {
-        alert("Be more specific");
-      } else {
-        fetch(
-          `https://zillow-com1.p.rapidapi.com/property?zpid=${response.zpid}`,
-          options
-        )
-          .then((response) => response.json())
-          .then((response) => console.log(response))
-          .catch((err) => console.error(err));
-      }
-    })
-    .catch((err) => console.error(err));
+  searchRequest.trim() &&
+    fetch(
+      `https://zillow-com1.p.rapidapi.com/propertyExtendedSearch?location=${modifySearchStringForFetchRequest}`,
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        if (response.totalResultCount > 1) {
+          alert("Be more specific");
+        } else {
+          fetch(
+            `https://zillow-com1.p.rapidapi.com/property?zpid=${response.zpid}`,
+            options
+          )
+            .then((response) => response.json())
+            .then((response) => {
+              console.log(response);
+              setSearchResults(response);
+            })
+            .catch((err) => console.error(err));
+        }
+      })
+      .catch((err) => console.error(err));
 };
 
 const SearchInput: FC = () => {
   const [searchRequest, setSearchRequest] = useState("");
+  const { setSearchResults } = useContext(SearchResultsContext);
   return (
     <form className={styles.search_input} onSubmit={(e) => console.log({ e })}>
       <div className={styles.search_input_title}>
@@ -59,7 +66,7 @@ const SearchInput: FC = () => {
       <input
         type="submit"
         value="Search"
-        onClick={(e) => getZillowData(e, searchRequest)}
+        onClick={(e) => getZillowData(e, searchRequest, setSearchResults)}
       />
     </form>
   );
