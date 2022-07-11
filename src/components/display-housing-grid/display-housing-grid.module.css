@@ -1,0 +1,21 @@
+.display_housing_grid_container {
+  display: flex;
+  justify-content: center;
+}
+.display_housing_grid_container ul {
+  display: grid;
+  width: 90%;
+  padding: var(--padding-sm);
+  grid-auto-flow: row dense;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--padding-sm);
+  min-height: 300px;
+  background-color: var(--white);
+  /* border-radius: 20px; */
+  justify-content: center;
+  list-style: none;
+}
+
+.display_housing_grid_container ul li {
+  background-color: var(--ternary-color);
+}

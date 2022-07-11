@@ -1,11 +1,11 @@
 :root {
   --white: #ffffff;
   --primary-color: #fb6565;
-  --background-color: rgb(30, 49, 90);
+  --background-color: #1e315a;
   --secondary-color: #f9cfcf;
-  --ternary-color: #3a977f;
+  --ternary-color: #2a8b63;
   --font-family: "Abril Fatface", cursive;
-  --font-sm: 0.8rem;
+  --font-sm: 0.95rem;
   --font-md: 1.3em;
   --font-lg: 2rem;
   --padding-sm: 0.5rem;

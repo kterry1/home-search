@@ -58,7 +58,7 @@ const SearchInput: FC = () => {
       />
       <input
         type="submit"
-        value="Search Away"
+        value="Search"
         onClick={(e) => getZillowData(e, searchRequest)}
       />
     </form>
