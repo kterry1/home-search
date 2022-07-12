@@ -1,23 +1,13 @@
 .display_housing_grid_container {
   display: flex;
   justify-content: center;
-}
-.display_housing_grid_container ul {
-  display: grid;
-  max-width: 90%;
-  min-width: 30%;
-  padding: var(--padding-sm);
-
-  grid-auto-columns: auto;
-  grid-template-columns: repeat(auto-fill);
-  gap: var(--padding-sm);
-  min-height: 300px;
+  align-items: center;
+  width: 550px;
+  margin: auto;
   background-color: var(--white);
-  border-radius: 2px;
-  justify-content: center;
-  list-style: none;
+  min-height: 300px;
 }
 
-.display_housing_grid_container ul li {
+.display_housing_grid_container img {
   background-color: var(--ternary-color);
 }
