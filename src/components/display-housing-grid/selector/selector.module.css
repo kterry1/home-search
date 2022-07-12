@@ -1,0 +1,24 @@
+.like,
+.dislike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 75px;
+  cursor: pointer;
+}
+
+.like img,
+.dislike img {
+  filter: brightness(0) invert(1);
+}
+
+.like {
+  background-color: var(--like-selector-color);
+  border-radius: 0 50px 50px 0;
+}
+
+.dislike {
+  background-color: var(--dislike-selector-color);
+  border-radius: 50px 0 0 50px;
+}

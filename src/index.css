@@ -3,7 +3,8 @@
   --primary-color: #fb6565;
   --background-color: #1e315a;
   --secondary-color: #f9cfcf;
-  --ternary-color: #2a8b63;
+  --like-selector-color: #2a8b63;
+  --dislike-selector-color: #983232;
   --font-family: "Abril Fatface", cursive;
   --font-sm: 0.95rem;
   --font-md: 1.3em;
