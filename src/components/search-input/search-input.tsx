@@ -59,7 +59,7 @@ const SearchInput: FC = () => {
         type="text"
         id="search_input"
         name="search_input"
-        placeholder="Enter a Street Address . . ."
+        placeholder="Enter a City and State(Ex: Raleigh, NC) . . ."
         onChange={(e) => setSearchRequest(e.target.value)}
         value={searchRequest}
       />

@@ -7,43 +7,19 @@
   background-color: var(--white);
   min-height: 300px;
   border-radius: 51px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .display_housing_grid_container > img {
   z-index: 2;
   transition: all 0.5s ease-in-out;
-  /* persive */
 }
 
 .display_housing_grid_container > img:hover {
   transform: translate(0px, 30px);
 }
 
-.dislike_selection {
-  animation: removed-item-animation 2s cubic-bezier(0.65, -0.02, 0.72, 0.29);
+.like_selection {
 }
 
-@keyframes removed-item-animation {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  30% {
-    opacity: 1;
-    transform: translateX(200px);
-  }
-
-  80% {
-    opacity: 1;
-    transform: translateX(-1500px);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
+.dislike_selection {
 }

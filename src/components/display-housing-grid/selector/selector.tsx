@@ -23,12 +23,9 @@ const Selector: FC<SelectorProps> = ({ decisionSelector }): JSX.Element => {
   const { setHouseSelectorDecision } = useContext(SearchResultsContext);
   return (
     <div
-      onClick={() => {
-        setHouseSelectorDecision(decisionSelector);
-        setTimeout(() => {
-          setHouseSelectorDecision("");
-        }, 2000);
-      }}
+      // onClick={() => {
+      //   setHouseSelectorDecision(decisionSelector);
+      // }}
       className={styles[decisionSelector]}
     >
       <img width="40" src={decisionSelectorToDisplay(decisionSelector)} />
